@@ -1,6 +1,6 @@
 import pickle
 import numpy as np
-import joblib
+#import joblib
 from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel, conlist
@@ -11,8 +11,8 @@ app = FastAPI(title="Predicting Wine Class with batching")
 
 # Open classifier in global scope
 with open("models/wine-95.pkl", "rb") as file:
-    #clf = pickle.load(file)
-    clf = joblib.load(file)
+    clf = pickle.load(file)
+    #clf = joblib.load(file)
 
 class Wine(BaseModel):
     batches: List[conlist(item_type=float, min_items=13, max_items=13)]
