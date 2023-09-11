@@ -44,5 +44,6 @@ jobs:
           pytest
       -
          name: Install scikit-learn
-  	 run: pip install scikit-learn==0.24.2
+  	     run: | 
+           pip install scikit-learn==0.24.2
 
