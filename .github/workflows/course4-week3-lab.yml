@@ -42,3 +42,7 @@ jobs:
         run: |
           cd app/
           pytest
+      -
+         name: Install scikit-learn
+  	 run: pip install scikit-learn==0.24.2
+
